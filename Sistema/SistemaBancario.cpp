@@ -28,17 +28,23 @@ SistemaBancario::~SistemaBancario() {
 }
 
 void SistemaBancario::print() {
-    Conta* tmp = contas.front();
-    tmp->print();
+    list<Conta*>::iterator it;
+    Conta* tmp;
+    for(it = contas.begin(); it != contas.end(); it++) {
+        cout << "------------------" << endl;
+        (*it)->print();
+        cout << "------------------" << endl;
+        cout << endl;
+    }
 }
 
+
+// Método principal
 int main(int argc, char** argv) {
 
     SistemaBancario s;
 
     s.print();
-
-    std::cout << "Eiiii\n";
 
     return 0;
 }
