@@ -34,9 +34,9 @@ public:
     void print();
 
     // Métodos get e set para atributos privados.
-    unsigned int getID();
-    string getNome();
-    string getCPF();
+    unsigned int getID() const;
+    string getNome() const;
+    string getCPF() const;
     void setID(unsigned int id);
     void setNome(string nome);
     void setCPF(string cpf);

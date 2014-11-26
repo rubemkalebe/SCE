@@ -1,3 +1,8 @@
+/**
+* A classe Conta modela uma conta de um
+* banco.
+**/
+
 #ifndef CONTA_H
 #define CONTA_H
 
@@ -36,10 +41,23 @@ public:
     // Construtor padrão da classe
     Conta(Cliente* cliente, double saldo = 0);
 
-    // Destruturo
+    // Destrutor
     ~Conta();
 
+    // Imprime informações da conta
     void print();
+
+    // Métodos get e set para atributos privados
+    Cliente* getCliente() const;
+    string getNumeroConta() const;
+    string getSenha() const;
+    double getSaldo() const;
+    bool getStatus() const;
+    void setCliente(Cliente* cliente);
+    void setNumeroConta(string numeroConta);
+    void setSenha(string senha);
+    void setSaldo(double saldo);
+    void setStatus(bool status);
 
 private:
 

@@ -14,15 +14,15 @@ void Cliente::print() {
     cout << "CPF do cliente: " << cpf << endl;
 }
 
-unsigned int Cliente::getID() {
+unsigned int Cliente::getID() const {
     return id;
 }
 
-string Cliente::getNome() {
+string Cliente::getNome() const {
     return nome;
 }
 
-string Cliente::getCPF() {
+string Cliente::getCPF() const {
     return cpf;
 }
 

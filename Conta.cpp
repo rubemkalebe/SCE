@@ -15,7 +15,60 @@ Conta::~Conta() {
 }
 
 void Conta::print() {
-    cliente->print();
+    if(status) {
+        cliente->print(); // Imprime info de cliente
+        cout << "Número da conta: " << numeroConta << endl;
+        cout << "Saldo da conta: " << saldo << endl;
+    } else {
+        cout << "A conta " << numeroConta << " está desativada!" << endl;
+    }
+
+}
+
+Cliente* Conta::getCliente() const {
+    return cliente;
+}
+
+string Conta::getNumeroConta() const {
+    return numeroConta;
+}
+
+string Conta::getSenha() const {
+    return senha;
+}
+
+double Conta::getSaldo() const {
+    return saldo;
+}
+
+bool Conta::getStatus() const {
+    return status;
+}
+
+void Conta::setCliente(Cliente* cliente) {
+    if(cliente != NULL) {
+        this->cliente = cliente;
+    }
+}
+
+void Conta::setNumeroConta(string numeroConta) {
+    if(numeroConta != "") {
+        this->numeroConta = numeroConta;
+    }
+}
+
+void Conta::setSenha(string senha) {
+    if(senha != "") {
+        this->senha = senha;
+    }
+}
+
+void Conta::setSaldo(double saldo) {
+    (this->saldo) += saldo;
+}
+
+void Conta::setStatus(bool status) {
+    this->status = status;
 }
 
 string Conta::geraNumeroConta() {
