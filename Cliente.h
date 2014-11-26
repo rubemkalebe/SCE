@@ -1,3 +1,8 @@
+/**
+* A classe Cliente modela um cliente de
+* um banco.
+**/
+
 #ifndef CLIENTE_H
 #define CLIENTE_H
 
