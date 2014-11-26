@@ -17,14 +17,14 @@ SistemaBancario::SistemaBancario() {
     contas.push_back(c1);
     contas.push_back(c2);
 
-    delete cl1;
-    delete cl2;
-    delete c1;
-    delete c2;
 }
 
 SistemaBancario::~SistemaBancario() {
-
+    while(!contas.empty()) {
+        Conta* tmp = contas.front();
+        contas.pop_front();
+        delete tmp;
+    }
 }
 
 void SistemaBancario::print() {
