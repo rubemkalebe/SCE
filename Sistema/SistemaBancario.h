@@ -33,7 +33,12 @@ public:
     //Destrutor
     ~SistemaBancario();
 
-    void print(); // Corrigir depois
+    // Imprime todas as contas
+    void print();
+
+    bool deposito(int valor, string numeroConta);
+    bool saque(int valor, string numeroConta);
+    int saldo(string numeroConta);
 
 };
 

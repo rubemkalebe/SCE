@@ -1,11 +1,11 @@
 #include "Conta.h"
 
-Conta::Conta(Cliente* cliente, double saldo) {
+Conta::Conta(Cliente* cliente, int saldo) {
     this->cliente = cliente;
     numeroConta = geraNumeroConta();
     // Leitura da senha
-    cout << "Digite a senha: ";
-    cin >> senha;
+    cout << "Digite a senha do cliente #" << cliente->getID() << ": ";
+    std::getline(cin, senha);
     this->saldo = saldo;
     status = true;
 }
@@ -37,7 +37,7 @@ string Conta::getSenha() const {
     return senha;
 }
 
-double Conta::getSaldo() const {
+int Conta::getSaldo() const {
     return saldo;
 }
 
@@ -63,7 +63,7 @@ void Conta::setSenha(string senha) {
     }
 }
 
-void Conta::setSaldo(double saldo) {
+void Conta::setSaldo(int saldo) {
     (this->saldo) += saldo;
 }
 

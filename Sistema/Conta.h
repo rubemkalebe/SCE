@@ -31,7 +31,7 @@ class Conta {
     string senha;
 
     // Saldo da conta
-    double saldo;
+    int saldo;
 
     // Status da conta (a conta pode estar ativa ou não)
     bool status;
@@ -39,7 +39,7 @@ class Conta {
 public:
 
     // Construtor padrão da classe
-    Conta(Cliente* cliente, double saldo = 0);
+    Conta(Cliente* cliente, int saldo = 0);
 
     // Destrutor
     ~Conta();
@@ -51,12 +51,12 @@ public:
     Cliente* getCliente() const;
     string getNumeroConta() const;
     string getSenha() const;
-    double getSaldo() const;
+    int getSaldo() const;
     bool getStatus() const;
     void setCliente(Cliente* cliente);
     void setNumeroConta(string numeroConta);
     void setSenha(string senha);
-    void setSaldo(double saldo);
+    void setSaldo(int saldo);
     void setStatus(bool status);
 
 private:
