@@ -88,7 +88,8 @@ int main(int argc, char** argv) {
         cout << "Entre com a operação: " << endl;
         cout << "\t\tDEPOSITO" << endl;
         cout << "\t\tSAQUE" << endl;
-        cout << "\t\tSALDO" << endl << endl;
+        cout << "\t\tSALDO" << endl;
+        cout << "\t\tDESLIGAR" << endl << endl;
         cout << "\t\t\t\t: ";
         cin >> input;
 
@@ -124,6 +125,10 @@ int main(int argc, char** argv) {
             } else {
                 cout << "\t\tConsulta inválida!!" << endl;
             }
+        } else if(input == "DESLIGAR") {
+            // encerra sistema
+            cout << "***FIM DE EXECUÇÃO***" << endl << endl;
+            break;
         } else {
             cout << "\t\tEntrada inválida!! Tente novamente!!" << endl;
         }
